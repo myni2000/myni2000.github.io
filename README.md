@@ -67,5 +67,5 @@ Sau khi nghiên cứu về các dịch vụ Hosting và Domain, nhóm quyết đ
 - Không đặt được tên miền đẹp.
 
 ### Link
-- [Github](https://myni2000.github.io)
+- [Github] (https://myni2000.github.io)
 - [heroku](https://micera.herokuapp.com)
