@@ -4,11 +4,11 @@
 
 Nhóm chúng em gồm các thành viên:
 
-1. Phạm Thị My Ni
-2.
-3.
-4.
-5.
+1. Phạm Thị My Ni - K184111404
+2. Nguyễn Thị Dung - K184111364
+3. Trần Thị Hương Thảo - K184111418
+4. Hồ Dương Thị Thu Trang - K184111430
+5. Phạm Thị Ngọc Thảo - K184111417
 
 ## 1. Giới thiệu website
 
@@ -65,3 +65,6 @@ Sau khi nghiên cứu về các dịch vụ Hosting và Domain, nhóm quyết đ
 ### Nhược điểm
 - Tốc độ tải ảnh còn hạn chế.
 - Không đặt được tên miền đẹp.
+### Link
+- Github: [myni2000.github.io]
+- heroku: [micera.herokuapp.com]
