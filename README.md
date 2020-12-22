@@ -66,5 +66,5 @@ Sau khi nghiên cứu về các dịch vụ Hosting và Domain, nhóm quyết đ
 - Tốc độ tải ảnh còn hạn chế.
 - Không đặt được tên miền đẹp.
 ### Link
-- Github: [myni2000.github.io]
-- heroku: [micera.herokuapp.com]
+- Github: (myni2000.github.io)
+- heroku: (micera.herokuapp.com)
