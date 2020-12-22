@@ -33,6 +33,7 @@ MICERA
 
 ### Chức năng đã có
 - Menu danh mục sản phẩm ở `sanpham.html`.
+- Tìm kiếm sản phẩm
 - Thêm/xóa sản phẩm và tính thành tiền trong giỏ hàng.
 - Tính tổng hóa đơn và thanh toán
 - Hiển thị giá khuyến mãi sản phẩm (giảm 30%)
@@ -67,5 +68,5 @@ Sau khi nghiên cứu về các dịch vụ Hosting và Domain, nhóm quyết đ
 - Không đặt được tên miền đẹp.
 
 ### Link
-- [Github] (https://myni2000.github.io)
-- [heroku](https://micera.herokuapp.com)
+- [Link Github] (https://myni2000.github.io)
+- [:Link heroku] (https://micera.herokuapp.com)
