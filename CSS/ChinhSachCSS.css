@@ -1,0 +1,45 @@
+﻿.bodychinhsach {
+    margin: 0 auto;
+    padding: 0;
+    text-align: justify;
+}
+
+
+.Title20 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fz17 {
+    font-size: 17px;
+    line-height:30px;
+}
+
+
+.wrap-small {
+    width: 100%;
+    max-width: 986px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px
+}
+
+.item-careet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+}
+
+.box-text {
+    width: 100%;
+    max-width: 986px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 16px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    text-align: left
+}

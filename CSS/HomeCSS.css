@@ -1,0 +1,125 @@
+﻿.DanhMucHome {
+    text-align: center;
+    margin-bottom: 1.5em;
+    min-width:1360px;
+}
+    .DanhMucHome .xemtatca{
+        margin-top:10px;
+    }
+
+    .DanhMucHome .xemtatca a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: bold;
+        color: #000000;
+    }
+    .tableSPmoi .xemtatca a {
+        text-decoration: none !important;
+        color: #000000;
+    }
+.tableSPmoi {
+    min-width:1360px;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    width:100%;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    overflow-x: auto;
+    padding-bottom: 40px;
+    table-layout: fixed;
+}
+    .tableSPmoi tr td {
+        background-color: #ffffff;
+        border: 1.3vw solid #f0f0f0;
+    }
+a{
+    cursor:pointer;
+    text-decoration:none;
+}
+.category{
+    padding-top:2em;
+    margin-left:0.5em;
+    margin-right:0.5em;
+    margin-bottom:0;
+    padding-bottom:0;
+    min-width:1360px;
+}
+.thongdiep {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    align-content:center;
+}
+.tablethongdiep {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    text-align:center;
+}
+.thongdiep table {
+    padding-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.category img {
+    width: 100%;
+    opacity: 0.6;
+}
+    .category img:hover {
+        transition: all 200ms linear;
+        transform: scale(1.1);
+        opacity: 1;
+        z-index: 99;
+    }
+.tableSPmoi .itemproduct {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom:20px;
+}
+    .tableSPmoi .itemproduct:hover {
+        outline: 1px solid #127681;
+    }
+.tableSPmoi .giakhuyenmai {
+    font-size: 16px;
+    text-align: center;
+    color: #ff0000
+}
+.tableSPmoi .giagoc {
+    text-decoration-line: line-through;
+    margin-top: 10px;
+  
+    color: #000;
+}
+.tableSPmoi .imgproduct {
+    width: 100%;
+    margin-bottom: 15px;
+}
+        .tableSPmoi.imgproduct a {
+            cursor: pointer;
+        }
+.tableSPmoi .tenproduct {
+    padding-top: 10px;
+    font-weight: bold;
+    
+    text-transform: uppercase;
+    color: #000;
+}
+.tableSPmoi .giaproduct {
+    margin-top: 10px;
+   text-decoration:none;
+    color: #000;
+}
+.itemproduct span {
+    font-size: 16px;
+    margin: 0;
+}
+.lineNoSpace {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width:1360px;
+}

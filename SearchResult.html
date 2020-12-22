@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Images/Logo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8" />
+    <title>Kết quả tìm kiếm</title>
+    <link rel="stylesheet" href="CSS/NavCSS.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/SearchCSS.css" type="text/css"/>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        function showlogin() {
+            document.getElementById('Login').style.display = 'block'
+        }
+    </script>
+
+   <script src="SCRIPT/SearchScript.js"></script>
+    <script src="SCRIPT/HeaderScript.js"></script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body onload="loading(), loadinggiohang()">
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html" class="logo"><img style="padding-right:2em;font-weight:bold;" class="imglogo" src="Images/Logowebsite.png" height="80" /></a>
+            <a href="../index.html">TRANG CHỦ</a>
+            <a href="../SanPham.html"> SẢN PHẨM </a>
+            <a href="../KhuyenMai.html">KHUYẾN MÃI</a>
+            <a href="TuyenDung.html">TUYỂN DỤNG</a>
+            <a href="../LienHe.html">LIÊN HỆ</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <span class="searchclass">
+            <input class="searchinput" type="text" size="30" placeholder="Tìm sản phẩm" name="txtsearch" id="txtsearch" onclick="autocompletesearch()" />
+            <span class="searchicon"><img src="Images/search.png" width="25" onclick="xulySearch()" /></span>
+
+        </span>
+        <span class="user" onclick="showlogin()"><img src="Images/user.png" width="25" /></span>
+        <span class="cart">
+            <img onclick="javascript: window.location.href = '../GioHang.html'; " src="Images/cart.png" width="25" />
+        </span>
+        <span id="numproduct">0</span>
+    </header>
+    <div align="center" style="min-height:600px;" id="main">
+        <h1>KẾT QUẢ TÌM KIẾM</h1>
+        <h2 id="infoloc"></h2>
+
+        <table  class="searchbody" id="mainbody" width="70%" cellspacing="35">
+          
+        </table>
+    </div>
+    <footer>
+        <div align="center" id="footermain">
+
+            <div style="vertical-align:top;">
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="SanPham.html">SẢN PHẨM</a></li>
+                    <li><a href="KhuyenMai.html">KHUYẾN MÃI</a></li>
+                    <li><a href="TuyenDung.html">TUYỂN DỤNG</a></li>
+                    <li style="padding-bottom:50px;"><a href="LienHe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+                <ul>
+                    <li>
+                        <a href="VeChungToi.html">VỀ CHÚNG TÔI</a>
+                    </li>
+                    <li>
+                        <a href="https://tinyurl.com/micerafeedback" target="_blank">CHĂM SÓC KHÁCH HÀNG</a>
+                    </li>
+                    <li>
+                        <a href="ChinhSachDoiTra.html">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li>
+                        <a> <span>PHƯƠNG THỨC THANH TOÁN </span></a>
+
+                    </li>
+
+                    <li style="padding-top:20px; padding-right:37px;">
+                        <img src="Images/visanew.png" height="30" />
+                        <img src="Images/mastercardnew.png" height="30" />
+                        <img src="Images/paypalnew.png" height="30" />
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li> <a> <span>KẾT NỐI VỚI MICERA </span></a></li>
+                    <li style="padding-top:20px; padding-right:110px;">
+                        <img src="Images/facebook.png" height="25" />
+                        <img src="Images/instagram.png" height="25" />
+                        <img src="Images/youtube.png" height="25" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div style="display:none;" id="Login" class="modal">
+        <form class="modal-content animate">
+
+            <table class="tablelogin">
+                <tr>
+                    <td>
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG NHẬP
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px; margin-top:12px;" for="uname"><b>Tên người dùng hoặc địa chỉ email(*)</b></label>
+                            <input type="text" required placeholder="Nhập tên người dùng hoặc email" name="uname">
+                            <label style="font-size:13px;" for="psw"><b>Mật khẩu(*)</b></label>
+                            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember">Nhớ mật khẩu
+                            </label>
+                            <div> <button type="submit" id="btnLogin" onclick="alert('Chào mừng bạn đến với Micera')">ĐĂNG NHẬP</button></div>
+                            <div style="font-size:13px;"><a href="QuenMatKhau.html">Quên mật khẩu?</a></div>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="vl"></div>
+                    </td>
+                    <td>
+                    <td style="width:370px;vertical-align:top">
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG KÝ
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px;" for="uname"><b>Địa chỉ Email (*)</b></label>
+                            <input required type="text" placeholder="Nhập email" name="uname">
+                            <div style="font-size:12px; margin-bottom:10px;"> Một mật khẩu sẽ được gửi tới địa chỉ Email của bạn</div>
+                            <div> <button type="submit" id="btnLogin">ĐĂNG KÝ</button></div>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+    <script>
+        var modal = document.getElementById('Login');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

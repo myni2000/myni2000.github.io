@@ -1,0 +1,76 @@
+﻿
+.container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #66afe9;
+    outline: 0;
+}
+
+button {
+    background-color: #127681;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+    button:hover {
+        background: #000;
+        border: 1px solid rgba(0, 0, 0, .05);
+        box-shadow: 1px 1px 2px rgba(255, 255, 255, .2);
+        color: #fff;
+        text-decoration: none;
+        text-shadow: -1px -1px 0 #000;
+        transition: all 250ms linear;
+        cursor: pointer;
+    }
+
+.imgcontainer {
+    text-align: center;
+    margin: 0 0 12px 0;
+    position: relative;
+}
+
+.container {
+    padding: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 50%;
+}
+.vl {
+    border-left: 1px solid #ccc;
+    height: 200px;
+}
+
+.tablelogin {
+    width: 100%;
+    max-width: 100%;
+}

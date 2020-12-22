@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Images/Logo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="CSS/NavCSS.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/SlideCSS.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/HomeCSS.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/LogInCSS.css" type="text/css" />
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        function showlogin(){
+            document.getElementById('Login').style.display='block'
+        }
+    </script>
+    
+    <script src="SCRIPT/SlideScript.js"></script>
+    <script src="SCRIPT/HeaderScript.js"></script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body onload="loadingshopping()">
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html" class="logo"><img style="padding-right:2em;font-weight:bold;" class="imglogo" src="Images/Logowebsite.png" height="80" /></a>
+            <a href="../index.html">TRANG CHỦ</a>
+            <a href="../SanPham.html"> SẢN PHẨM </a>
+            <a href="../KhuyenMai.html">KHUYẾN MÃI</a>
+            <a href="TuyenDung.html">TUYỂN DỤNG</a>
+            <a href="../LienHe.html">LIÊN HỆ</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <span class="searchclass">
+            <input class="searchinput" type="text" size="30" placeholder="Tìm sản phẩm" name="txtsearch" id="txtsearch" onclick="autocompletesearch()" />
+            <span class="searchicon"><img src="Images/search.png" width="25" onclick="xulySearch()" /></span>
+
+        </span>
+        <span class="user" onclick="showlogin()"><img src="Images/user.png" width="25" /></span>
+        <span class="cart">
+            <img onclick="javascript: window.location.href = '../GioHang.html'; " src="Images/cart.png" width="25" />
+        </span>
+        <span id="numproduct">0</span>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Images/Slide1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Images/Slide2.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Images/Slide3.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides()">&#10094;</a>
+        <a class="next" onclick="plusSlides()">&#10095;</a>
+    </div>
+    <div style="text-align:center;min-width:1360px;">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <script>
+        var slideIndex = 0
+        showSlides(slideIndex)
+        window.setInterval(plusSlides, 3000)
+    </script>
+    <div class="lineNoSpace"></div>
+    <div class="DanhMucHome">
+        <div class="tendanhmuc" style="font-size:30px; ">
+            HÀNG MỚI VỀ
+        </div>
+        <hr style="width:180px;" />
+        <div class="xemtatca">
+            <a style="color:black" href="HangMoiVe.html">
+                <u style="font-size:10pt;text-decoration:none;">
+                    Xem tất cả
+                </u>
+            </a>
+        </div>
+        <table class="tableSPmoi">
+            <tr>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN13">
+                        <img class="imgproduct" src="Images/N131.jpg" />
+                        <span class="tenproduct"> Bộ nồi nấu ăn bằng gốm nhiều kích thước và màu sắc </span> <br />
+                        <span class="giaproduct"> 475 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN01">
+                        <img class="imgproduct" src="Images/N011.jpg" />
+                        <span class="tenproduct"> Nồi Gốm Sứ Có Nắp Viền Vàng, Men Bóng Phong Cách Bắc Âu </span> <br />
+                        <span class="giaproduct"> 220 000 VNĐ</span>
+                    </a>
+                </td>
+
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD02">
+                        <img class="imgproduct" src="Images/D021.jpg" />
+                        <span class="tenproduct"> Đĩa hồng phong cách Bắc Âu </span> <br />
+                        <span class="giaproduct"> 200 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD17">
+                        <img class="imgproduct" src="Images/D172.jpg" />
+                        <span class="tenproduct"> Đĩa họa tiết phong cách Nhật Bản </span> <br />
+                        <span class="giaproduct"> 163 000 VNĐ</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN14">
+                        <img class="imgproduct" src="Images/N141.jpg" />
+                        <span class="tenproduct"> Nồi gốm sang trọng phong cách Nhật Bản </span> <br />
+                        <span class="giaproduct"> 440 000 VNĐ</span>
+                    </a>
+
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN07">
+                        <img class="imgproduct" src="Images/N071.jpg" />
+                        <span class="tenproduct"> Nồi gốm sứ nắp hoa cherry đẹp mắt </span> <br />
+                        <span class="giaproduct"> 365 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN06">
+                        <img class="imgproduct" src="Images/N061.jpg" />
+                        <span class="tenproduct"> Nồi gốm nắp thủy tinh nhiều màu pastel </span> <br />
+                        <span class="giaproduct"> 232 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN05">
+                        <img class="imgproduct" src="Images/N051.jpg" />
+                        <span class="tenproduct"> Nồi gốm dễ thương có nắp đậy kiêm giá đỡ điện thoại </span> <br />
+                        <span class="giaproduct"> 215 000 VNĐ</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="DanhMucHome">
+        <div class="tendanhmuc" style="font-size:30px;margin-top:1em;">
+            BÁN CHẠY NHẤT
+        </div>
+        <hr style="width:180px;" />
+        <div class="xemtatca">
+            <a href="BanChayNhat.html">
+                <u style="font-size:10pt;color:black;text-decoration-line:none">
+                    Xem tất cả
+                </u>
+            </a>
+        </div>
+        <table class="tableSPmoi">
+            <tr>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD40">
+                        <img class="imgproduct" src="Images/D401.jpg" />
+                        <span class="tenproduct"> Đĩa gốm hình cá </span> <br />
+                        <span class="giaproduct"> 175 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD15">
+                        <img class="imgproduct" src="Images/D151.jpg" />
+                        <span class="tenproduct"> Đĩa bánh, trang trí bàn ăn hình nơ vintage xinh xắn</span> <br />
+                        <span class="giaproduct"> 145 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD02">
+                        <img class="imgproduct" src="Images/D021.jpg" />
+                        <span class="tenproduct"> Đĩa hồng phong cách Bắc Âu </span> <br />
+                        <span class="giaproduct"> 200 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD16">
+                        <img class="imgproduct" src="Images/D161.jpg" />
+                        <span class="tenproduct"> Đĩa Gốm Chịu Nhiệt Cao </span> <br />
+                        <span class="giaproduct"> 175 000 VNĐ</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD12">
+                        <img class="imgproduct" src="Images/D121.jpg" />
+                        <span class="tenproduct"> Đĩa Tròn Trang Trí Bàn Ăn Phong Cách Bắc Âu Macaroon </span> <br />
+                        <span class="giaproduct"> 175 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD05">
+                        <img class="imgproduct" src="Images/D051.jpg" />
+                        <span class="tenproduct"> Đĩa ăn, đĩa trang trí hình chảo hai quai </span> <br />
+                        <span class="giaproduct"> 180 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD01">
+                        <img class="imgproduct" src="Images/D011.jpg" />
+                        <span class="tenproduct"> Đĩa tròn họa tiết vẽ tay </span> <br />
+                        <span class="giaproduct"> 180 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD09">
+                        <img class="imgproduct" src="Images/D091.jpg" />
+                        <span class="tenproduct"> Đĩa nướng vintage trắng họa tiết mặt trời </span> <br />
+                        <span class="giaproduct"> 135 000 VNĐ</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="DanhMucHome">
+        <div class="tendanhmuc" style="font-size:30px; margin-top:1em;">
+            KHUYẾN MÃI
+        </div>
+        <hr style="width:180px;" />
+        <div class="xemtatca">
+            <a href="KhuyenMai.html">
+                <u style="font-size:10pt;color:black;text-decoration-line:none">
+                    Xem tất cả
+                </u>
+            </a>
+        </div>
+        <table class="tableSPmoi">
+            <tr>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAB18">
+                        <img class="imgproduct" src="Images/B181.jpg" />
+                        <span class="tenproduct"> Tô vuông trang trí Fukugawa </span> <br />
+                        <span class="giagoc"> 35 000 VNĐ</span> &nbsp; &nbsp;<span class="giakhuyenmai"> 24 500 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD21">
+                        <img class="imgproduct" src="Images/D211.jpg" />
+                        <span class="tenproduct"> Đĩa hình vịt gấu Line</span> <br />
+                        <span class="giagoc"> 181 000 VNĐ</span> &nbsp; &nbsp;<span class="giakhuyenmai"> 126 700 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD02">
+                        <img class="imgproduct" src="Images/D021.jpg" />
+                        <span class="tenproduct"> Đĩa hồng phong cách Bắc Âu </span> <br />
+                        <span class="giagoc"> 35 000 VNĐ</span> &nbsp; &nbsp; <span class="giakhuyenmai"> 24 500 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAD22">
+                        <img class="imgproduct" src="Images/D221.jpg" />
+                        <span class="tenproduct"> Đĩa tròn gốm họa tiết danh lam thắng cảnh </span> <br />
+                        <span class="giagoc"> 200 000 VNĐ</span>&nbsp; &nbsp; <span class="giakhuyenmai"> 140 000 VNĐ</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAK21">
+                        <img class="imgproduct" src="Images/K211.jpg" />
+                        <span class="tenproduct"> Ly Có Quai 8.5x8.5x9.5 cm </span> <br />
+                        <span class="giagoc"> 140 000 VNĐ</span>&nbsp; &nbsp; <span class="giakhuyenmai"> 98 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAN23">
+                        <img class="imgproduct" src="Images/N231.jpg" />
+                        <span class="tenproduct"> Nồi gốm xuất Nhật chống tràn </span> <br />
+                        <span class="giagoc"> 235 000 VNĐ</span>&nbsp; &nbsp; <span class="giakhuyenmai"> 164 500 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAT19">
+                        <img class="imgproduct" src="Images/T191.jpg" />
+                        <span class="tenproduct"> Cặp thố nâu vàng </span> <br />
+                        <span class="giagoc"> 390 000 VNĐ</span>&nbsp; &nbsp; <span class="giakhuyenmai"> 273 000 VNĐ</span>
+                    </a>
+                </td>
+                <td class="itemproduct">
+                    <a href="DetailSP.html?id=MICERAT24">
+                        <img class="imgproduct" src="Images/T241.jpg" />
+                        <span class="tenproduct">Tô thố gốm sứ đựng thực phẩm STARRICE SR003 </span> <br />
+                        <span class="giagoc"> 259 000 VNĐ</span>&nbsp; &nbsp; <span class="giakhuyenmai"> 181 500 VNĐ</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="category">
+        <table >
+            <tr>
+                <td>
+                    <a href="SanPham.html#cateNoi">
+                        <img src="Images/cateNoi.png" />
+                    </a>
+                </td>
+                <td>
+                    <a href="SanPham.html#cateBat">
+                        <img src="Images/cateBat.png" />
+                    </a>
+                </td>
+                <td>
+                    <a href="SanPham.html#cateDia">
+                        <img src="Images/cateDia.png" />
+                    </a>
+                </td>
+                <td>
+                    <a href="SanPham.html#cateTho">
+                        <img src="Images/cateTho.png" />
+                    </a>
+                </td>
+                <td>
+                    <a href="SanPham.html#cateKhac">
+                        <img src="Images/cateKhac.png" />
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <footer>
+        <div align="center" id="footermain">
+
+            <div style="vertical-align:top;">
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="SanPham.html">SẢN PHẨM</a></li>
+                    <li><a href="KhuyenMai.html">KHUYẾN MÃI</a></li>
+                    <li><a href="TuyenDung.html">TUYỂN DỤNG</a></li>
+                    <li style="padding-bottom:50px;"><a href="LienHe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+                <ul>
+                    <li>
+                        <a href="VeChungToi.html" >VỀ CHÚNG TÔI</a>
+                    </li>
+                    <li>
+                        <a href="https://tinyurl.com/micerafeedback" target="_blank">CHĂM SÓC KHÁCH HÀNG</a>
+                    </li>
+                    <li>
+                        <a href="ChinhSachDoiTra.html" >CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li>
+                        <a> <span>PHƯƠNG THỨC THANH TOÁN </span></a>
+
+                    </li>
+
+                    <li style="padding-top:8px; padding-right:37px;">
+                        <img src="Images/visanew.png" height="30" />
+                        <img src="Images/mastercardnew.png" height="30" />
+                        <img src="Images/paypalnew.png" height="30" />
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li> <a> <span>KẾT NỐI VỚI MICERA </span></a></li>
+                    <li style="padding-top:10px; padding-right:110px;">
+                        <img src="Images/facebook.png" height="25" />
+                        <img src="Images/instagram.png" height="25" />
+                        <img src="Images/youtube.png" height="25" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div style="display:none;" id="Login" class="modal">
+        <form class="modal-content animate">
+           
+            <table class="tablelogin">
+                <tr>
+                    <td>
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;"><b>
+                                ĐĂNG NHẬP </b>
+                           
+                            </span><br /> <br />
+                            <label style="font-size:13px; margin-top:12px;" for="uname"><b>Tên người dùng hoặc địa chỉ email(*)</b></label>
+                            <input type="text" required placeholder="Nhập tên người dùng hoặc email" name="uname" >
+                            <label style="font-size:13px;" for="psw"><b>Mật khẩu(*)</b></label>
+                            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember">Nhớ mật khẩu
+                            </label>
+                            <div> <button type="submit" id="btnLogin" onclick="alert('Chào mừng bạn đến với Micera')">ĐĂNG NHẬP</button></div>
+                            <div style="font-size:13px;"><a href="QuenMatKhau.html">Quên mật khẩu?</a></div>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="vl"></div>
+                    </td>
+                    <td>
+                    <td style="width:370px;vertical-align:top">
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG KÝ
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px;" for="uname"><b>Địa chỉ Email (*)</b></label>
+                            <input required type="text" placeholder="Nhập email" name="uname">
+                            <div style="font-size:12px; margin-bottom:10px;"> Một mật khẩu sẽ được gửi tới địa chỉ Email của bạn</div>
+                            <div> <button type="submit" id="btnLogin">ĐĂNG KÝ</button></div>
+                        </div>
+                    </td>
+                    
+                </tr>
+               
+            </table>
+        </form>
+    </div>
+    <script>
+        var modal = document.getElementById('Login');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

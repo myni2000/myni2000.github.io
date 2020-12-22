@@ -1,0 +1,99 @@
+﻿body  {
+    margin: 0 auto;
+    padding: 0;
+    line-height:30px;
+}
+.container-VCT:not(.user) {
+    background: url("../Images/VeCT1.png") top center no-repeat #ff8314;
+    background-color: #127681;
+    background-size: 100% auto;
+    color: white;
+}
+.container-VCT{
+    min-width:1360px;
+}
+.container-VCT .txt-about {
+    padding-top: 39%;
+    padding-bottom: 5%
+}
+
+    .container-VCT .txt-about .text {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 40px;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        font-size: 18px;
+        vertical-align: top;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: justify;
+    }
+.txtbdy {
+    font-size: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+    margin-top:20px;
+}
+.col-2 {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+    display:block;
+    vertical-align:middle;
+    padding-top:2%;
+}    
+
+.title {
+    font-size:40px;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: left;
+    color:white;
+    padding-left:50px;
+    margin-top:20px;
+}
+.containerbdy {
+    display: flex;
+    align-items: center;
+   
+    display: block;
+    vertical-align:middle;
+}
+
+    .img {
+        width: 50% auto;
+        display: block;        
+    }
+      
+    .containerbdy .text {
+        width: 50%;
+        padding: 50px 10% 50px;
+        text-align: left
+    }
+
+.containerbdy .fixbody {
+    border-bottom: none
+}     
+      
+
+    .containerbdy .img {
+        width: 100% !important
+    }
+
+    .containerbdy .text {
+        width: 100% !important;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+   
+.fz28{
+    font-size:28px;
+}

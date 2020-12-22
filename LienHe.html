@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Liên hệ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Images/Logo.png" rel="icon" type="image/gif">
+    <link href="CSS/LienHeCSS.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/NavCSS.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/LogInCSS.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        function showlogin() {
+            document.getElementById('Login').style.display = 'block'
+        }
+    </script>
+    <script src="SCRIPT/HeaderScript.js"></script>
+</head>
+<body onload="loadingshopping()">
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html" class="logo"><img style="padding-right:2em;font-weight:bold;" class="imglogo" src="Images/Logowebsite.png" height="80" /></a>
+            <a href="../index.html">TRANG CHỦ</a>
+            <a href="../SanPham.html"> SẢN PHẨM </a>
+            <a href="../KhuyenMai.html">KHUYẾN MÃI</a>
+            <a href="TuyenDung.html">TUYỂN DỤNG</a>
+            <a href="../LienHe.html">LIÊN HỆ</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <span class="searchclass">
+            <input class="searchinput" type="text" size="30" placeholder="Tìm sản phẩm" name="txtsearch" id="txtsearch" onclick="autocompletesearch()" />
+            <span class="searchicon"><img src="Images/search.png" width="25" onclick="xulySearch()" /></span>
+
+        </span>
+        <span class="user" onclick="showlogin()"><img src="Images/user.png" width="25" /></span>
+        <span class="cart">
+            <img onclick="javascript: window.location.href = '../GioHang.html'; " src="Images/cart.png" width="25" />
+        </span>
+        <span id="numproduct">0</span>
+    </header>
+    <div class="box-text">
+        <div class="Title40">LIÊN HỆ VỚI CHÚNG TÔI</div>
+        <hr style="width:350px;" />
+        <div class="mt20">
+            Chúng tôi không chỉ hỗ trợ khi có vấn đề phát sinh, mà chúng tôi còn lắng nghe và tiếp thu những ý kiến đóng góp của khách hàng. Chỉ cần liên hệ, chúng tôi sẽ sẵn sàng để hỗ trợ bạn sớm nhất có thể.
+        </div>
+    </div>
+    <hr style="height:2px; border-width:0;color:#127681;background-color:#127681">
+    <div class="item-careet">
+        <table align="center" class="Store">
+            <tr>
+                <td>
+                    <div class="col-xs-6">
+                        <div class="Title30">THỦ ĐỨC- TPHCM</div>
+                        <div class="Title20">
+                            <img class="images" src="Images/cuahang1.jpg" alt="THỦ ĐỨC- TPHCM">
+                        </div>
+                        <div class="Title20"><strong>MICERA-THỦ ĐỨC</strong></div>
+                        <div>
+                            <p>
+                                Thứ 2 - Chủ nhật 10:00 - 19:00<br />
+                                Tel: 028.46.193.506<br />
+                                Email: <a href="mailto:info@micerathuduc.com">info@micerathuduc.com</a><br />
+                                669 QL1A, khu phố 3, Thủ Đức, Thành phố Hồ Chí Minh
+                            </p>
+                        </div>
+                        <div class="button"><a href="tel:+8458302384" class="link">HOTLINE&nbsp;&nbsp;|&nbsp;&nbsp;+8456 830 2384</a></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-xs-6">
+                        <div class="Title30">QUẬN 1- TPHCM</div>
+                        <div class="Title20">
+                            <img class="images" src="Images/cuahang2.jpg" alt="QUẬN 1- TPHCM">
+                        </div>
+                        <div class="Title20"><strong>MICERA-Q1</strong></div>
+                        <div>
+                            <p>
+                                Thứ 2 - Chủ nhật 10:00 - 19:00<br />
+                                Tel: 028.16.053.976<br />
+                                Email: <a href="mailto:info@miceraquan1.com">info@miceraquan1.com</a><br />
+                                Đường Nguyễn Văn Bình, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+                            </p>
+                        </div>
+                        <div class="button"><a href="tel:+8474920642" class="link">HOTLINE &nbsp;&nbsp;|&nbsp;&nbsp;+8472 492 0642</a></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="item-careet">
+        <div class="box-text">
+            <div class="Title40">LIÊN HỆ</div>
+            <div class="pt50">
+                <form>
+                    <div class="form-group">
+                        <label>HỌ TÊN *</label>
+                        <input required type="text" class="form-control" name="fullname">
+                    </div>
+                    <div class="form-group">
+                        <label>EMAIL *</label>
+                        <input required type="text" class="form-control" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>ĐIỆN THOẠI </label>
+                        <input type="text" class="form-control" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>NỘI DUNG *</label>
+                        <input required type="text" class="form-control" name="noidung">
+                    </div>
+                    <div align="center">
+                        <input type="submit" value="GỬI" class="button" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div align="center" id="footermain">
+
+            <div style="vertical-align:top;">
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="SanPham.html">SẢN PHẨM</a></li>
+                    <li><a href="KhuyenMai.html">KHUYẾN MÃI</a></li>
+                    <li><a href="TuyenDung.html">TUYỂN DỤNG</a></li>
+                    <li style="padding-bottom:50px;"><a href="LienHe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+                <ul>
+                    <li>
+                        <a href="VeChungToi.html">VỀ CHÚNG TÔI</a>
+                    </li>
+                    <li>
+                        <a href="https://tinyurl.com/micerafeedback" target="_blank">CHĂM SÓC KHÁCH HÀNG</a>
+                    </li>
+                    <li>
+                        <a href="ChinhSachDoiTra.html">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li>
+                        <a> <span>PHƯƠNG THỨC THANH TOÁN </span></a>
+
+                    </li>
+
+                    <li style="padding-top:20px; padding-right:37px;">
+                        <img src="Images/visanew.png" height="30" />
+                        <img src="Images/mastercardnew.png" height="30" />
+                        <img src="Images/paypalnew.png" height="30" />
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li> <a> <span>KẾT NỐI VỚI MICERA </span></a></li>
+                    <li style="padding-top:20px; padding-right:110px;">
+                        <img src="Images/facebook.png" height="25" />
+                        <img src="Images/instagram.png" height="25" />
+                        <img src="Images/youtube.png" height="25" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div style="display:none;" id="Login" class="modal">
+        <form class="modal-content animate">
+
+            <table class="tablelogin">
+                <tr>
+                    <td>
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG NHẬP
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px; margin-top:12px;" for="uname"><b>Tên người dùng hoặc địa chỉ email(*)</b></label>
+                            <input type="text" required placeholder="Nhập tên người dùng hoặc email" name="uname">
+                            <label style="font-size:13px;" for="psw"><b>Mật khẩu(*)</b></label>
+                            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember">Nhớ mật khẩu
+                            </label>
+                            <div> <button type="submit" id="btnLogin" onclick="alert('Chào mừng bạn đến với Micera')">ĐĂNG NHẬP</button></div>
+                            <div style="font-size:13px;"><a href="QuenMatKhau.html">Quên mật khẩu?</a></div>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="vl"></div>
+                    </td>
+                    <td>
+                    <td style="width:370px;vertical-align:top">
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG KÝ
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px;" for="uname"><b>Địa chỉ Email (*)</b></label>
+                            <input required type="text" placeholder="Nhập email" name="uname">
+                            <div style="font-size:12px; margin-bottom:10px;"> Một mật khẩu sẽ được gửi tới địa chỉ Email của bạn</div>
+                            <div> <button type="submit" id="btnLogin">ĐĂNG KÝ</button></div>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+    <script>
+        var modal = document.getElementById('Login');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

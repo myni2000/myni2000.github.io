@@ -1,0 +1,106 @@
+﻿.DanhMucHome {
+    text-align: center;
+    align-content:center;
+}
+.mainbody .itemproduct {
+    font-size: 16px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: black;
+
+}
+    .mainbody .itemproduct:hover {
+        outline: 1px solid #127681;
+    }
+
+.mainbody tr td:not(.DanhMucSP) {
+    background-color: #ffffff;
+    border: 20px solid #f0f0f0;
+}
+
+
+.mainbody .imgproduct {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color:inherit;
+}
+
+.mainbody {
+   margin-top:20px;
+}
+
+td .sidenav {
+    height: 400px;
+    width: 16.276041666666668vw;
+    min-width:60px;
+    position: sticky;
+    top: 120px;
+    background-color: #eef2f7;
+    overflow-x: hidden;
+    color: black;
+    padding: 10px 0px;
+    vertical-align: top;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    overflow-x: auto;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    margin: 2px auto;
+    background: white;
+    border-radius: 5px;
+}
+
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    display: block;
+   
+}
+    .sidenav a:hover {
+        color: #127681;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.034);
+    }
+.DanhMucSP {
+    text-align: center;
+    font-weight:bold;
+    vertical-align: central;
+    margin: 50px;
+    font-size: 2.5vw;
+}
+.category2 table {
+    width: 100%;
+    max-width:100%;
+    min-width:1360px;
+}
+.category2 img {
+    width: 100%;
+   
+}
+.category2 table td {
+    width: 1%;
+    vertical-align: top;
+}
+.category2 img:hover {
+
+    transition: all 200ms linear;
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 99;
+}
+.category2 {
+  
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

@@ -1,0 +1,52 @@
+﻿.banner img{
+    width:100%;
+    margin-top:83px;
+    min-width:1300px;
+}
+.mainBCN .itemproduct {
+    font-size: 16px;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+}
+    .mainBCN .itemproduct:hover {
+        outline: 1px solid #127681;
+    }
+.mainBCN .imgproduct {
+    width: 100%;
+    height:auto;
+}
+.mainBCN tr td:not(.DanhMucSP) {
+    background-color: #ffffff;
+    border: 30px solid #f0f0f0;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.mainBCN {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 1300px;
+}
+.DanhMucSP {
+    text-align: center;
+    vertical-align: central;
+   
+    font-size: 2.5vw;
+}
+.giakm {
+    font-size: 1.0416666666666667vw;
+    text-align: center;
+    color: #ff0000
+}
+
+ .giagoc {
+    text-decoration-line: line-through;
+    margin-top: 10px;
+    color: #000;
+}

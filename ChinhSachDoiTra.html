@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Chính sách trả hàng và hoàn tiền</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/TuyenDungCSS.css" type="text/css" rel="stylesheet" />
+    <link href="Images/Logo.png" rel="icon" type="image/gif">
+    <link href="CSS/NavCSS.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/LogInCSS.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/ChinhSachCSS.css" type="text/css" />
+    <script src="SCRIPT/HeaderScript.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        function showlogin() {
+            document.getElementById('Login').style.display = 'block'
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body onload="loadingshopping()">
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html" class="logo"><img style="padding-right:2em;font-weight:bold;" class="imglogo" src="Images/Logowebsite.png" height="80" /></a>
+            <a href="../index.html">TRANG CHỦ</a>
+            <a href="../SanPham.html"> SẢN PHẨM </a>
+            <a href="../KhuyenMai.html">KHUYẾN MÃI</a>
+            <a href="TuyenDung.html">TUYỂN DỤNG</a>
+            <a href="../LienHe.html">LIÊN HỆ</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <span class="searchclass">
+            <input class="searchinput" type="text" size="30" placeholder="Tìm sản phẩm" name="txtsearch" id="txtsearch" onclick="autocompletesearch()" />
+            <span class="searchicon"><img src="Images/search.png" width="25" onclick="xulySearch()" /></span>
+
+        </span>
+        <span class="user" onclick="showlogin()"><img src="Images/user.png" width="25" /></span>
+        <span class="cart">
+            <img onclick="javascript: window.location.href = '../GioHang.html'; " src="Images/cart.png" width="25" />
+        </span>
+        <span id="numproduct">0</span>
+    </header>
+    <div class="bodychinhsach">
+        <div class="box-text">
+            <div class="Title40">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</div>
+            <hr style="width:200px;" />
+        </div>
+        <div class="wrap-small">
+            <div class="Title20" style="padding-top:30px;">&#10066; <strong> ĐIỀU KIỆN TRẢ HÀNG</strong></div>
+            <div class="fz17">
+                <p>Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:</p>
+                <div style="padding-left:20px;">
+                    <div>
+                        -&nbsp; Người mua đã thanh toán nhưng không nhận được sản phẩm;
+                    </div>
+                    <div>
+                        - &nbsp;Sản phẩm bị lỗi hoặc bị hư hại trong quá trình vận chuyển;
+                    </div>
+                    <div>
+                        -&nbsp; Người bán giao sai sản phẩm cho Người mua (VD: sai kích cỡ, sai màu sắc, v.vv...);
+                    </div>
+                    <div>
+                        - &nbsp;Sản phẩm Người mua nhận được khác biệt một cách rõ rệt so với thông tin mà Người bán cung cấp trong mục mô tả sản phẩm;
+                    </div>
+                    <div>
+                        -&nbsp; Người bán đã tự thỏa thuận và đồng ý cho Người mua trả hàng (tuy nhiên MICERA sẽ cần Người bán xác nhận lại những thỏa thuận này).
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-careet">
+            <div class="wrap-small">
+                <div class="Title20">&#10066; <strong> QUYỀN LỢI CỦA NGƯỜI BÁN</strong></div>
+                <div class="fz17" style="padding-left:20px; padding-top:10px;">
+                    <div>
+                        <div>
+                            - &nbsp;Khi nhận được yêu cầu trả hàng và/hoặc hoàn tiền từ phía Người mua, MICERA sẽ thông báo cho Người bán qua văn bản (thông báo trên Ứng dụng và/hoặc thư điện tử và/hoặc tin nhắn điện thoại). Người bán cần phải gửi phản hồi theo hướng dẫn của MICERA trong thời gian quy định. Sau thời gian đó, nếu MICERA không nhận được bất cứ phản hồi nào từ Người bán, MICERA hiểu rằng Người bán hoàn toàn đồng ý với yêu cầu của Người mua, và tự động hoàn tiền cho Người mua sau khi nhận được bằng chứng về việc Người mua đã hoàn tất hoàn trả hàng cho Người bán.
+
+                        </div>
+                        <div>
+                            -&nbsp; MICERA luôn theo dõi phản hồi của Người bán trong từng trường hợp và toàn quyền ra quyết định cuối cùng đối với yêu cầu trả hàng/hoàn tiền của Người mua.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-careet">
+            <div class="wrap-small">
+                <div class="Title20">&#10066; <strong> TÌNH TRẠNG CỦA HÀNG TRẢ LẠI</strong></div>
+                <div class="fz17">
+                    <p style="padding-left:20px;">
+                        -&nbsp; Để hạn chế các rắc rối phát sinh liên quan đến trả hàng, Người mua lưu ý cần phải gửi trả sản phẩm bao gồm toàn bộ phụ kiện đi kèm, hóa đơn VAT, tem phiếu bảo hành... nếu có và sản phẩm phải trong tình trạng nguyên vẹn như khi nhận hàng. MICERA khuyến khích Người mua chụp lại ảnh sản phẩm ngay khi nhận được để làm bằng chứng đối chiếu/khiếu nại về sau nếu cần
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item-careet">
+            <div class="wrap-small">
+                <div class="Title20">&#10066; <strong> Chi phí trả hàng</strong></div>
+                <div class="fz17">
+                    <div style="padding-left:20px;margin-top:10px;">
+                        <div>
+                            - &nbsp; Người bán và Người mua cần thống nhất về việc ai sẽ là người chịu phí vận chuyển đối với hàng trả lại.
+                        </div>
+                        <div>
+                            - &nbsp; Với hàng MICERA Mall, Người mua sẽ không phải trả phí trả hàng.
+                        </div>
+                        <div>
+                            - &nbsp; Với hàng không thuộc MICERA Mall, Người mua cần thanh toán phí trả hàng trực tiếp cho đơn vị vận chuyển trước khi gửi trả hàng.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div align="center" id="footermain">
+
+            <div style="vertical-align:top;">
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="SanPham.html">SẢN PHẨM</a></li>
+                    <li><a href="KhuyenMai.html">KHUYẾN MÃI</a></li>
+                    <li><a href="TuyenDung.html">TUYỂN DỤNG</a></li>
+                    <li style="padding-bottom:50px;"><a href="LienHe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+                <ul>
+                    <li>
+                        <a href="VeChungToi.html" >VỀ CHÚNG TÔI</a>
+                    </li>
+                    <li>
+                        <a href="https://tinyurl.com/micerafeedback" target="_blank">CHĂM SÓC KHÁCH HÀNG</a>
+                    </li>
+                    <li>
+                        <a href="ChinhSachDoiTra.html" target="_blank">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li>
+                        <a> <span>PHƯƠNG THỨC THANH TOÁN </span></a>
+
+                    </li>
+
+                    <li style="padding-top:20px; padding-right:37px;">
+                        <img src="Images/visanew.png" height="30" />
+                        <img src="Images/mastercardnew.png" height="30" />
+                        <img src="Images/paypalnew.png" height="30" />
+                    </li>
+                </ul>
+            </div>
+            <div style="vertical-align:top;">
+
+                <ul>
+                    <li> <a> <span>KẾT NỐI VỚI MICERA </span></a></li>
+                    <li style="padding-top:20px; padding-right:110px;">
+                        <img src="Images/facebook.png" height="25" />
+                        <img src="Images/instagram.png" height="25" />
+                        <img src="Images/youtube.png" height="25" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div style="display:none;" id="Login" class="modal">
+        <form class="modal-content animate">
+
+            <table class="tablelogin">
+                <tr>
+                    <td>
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG NHẬP
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px; margin-top:12px;" for="uname"><b>Tên người dùng hoặc địa chỉ email(*)</b></label>
+                            <input type="text" required placeholder="Nhập tên người dùng hoặc email" name="uname">
+                            <label style="font-size:13px;" for="psw"><b>Mật khẩu(*)</b></label>
+                            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember">Nhớ mật khẩu
+                            </label>
+                            <div> <button type="submit" id="btnLogin" onclick="alert('Chào mừng bạn đến với Micera')">ĐĂNG NHẬP</button></div>
+                            <div style="font-size:13px;"><a href="QuenMatKhau.html">Quên mật khẩu?</a></div>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="vl"></div>
+                    </td>
+                    <td>
+                    <td style="width:370px;vertical-align:top">
+                        <div class="container">
+                            <span style="font-size:18px; margin-bottom:12px; border-bottom:1px solid #127681;">
+                                <b>
+                                    ĐĂNG KÝ
+                                </b>
+
+                            </span><br /> <br />
+                            <label style="font-size:13px;" for="uname"><b>Địa chỉ Email (*)</b></label>
+                            <input required type="text" placeholder="Nhập email" name="uname">
+                            <div style="font-size:12px; margin-bottom:10px;"> Một mật khẩu sẽ được gửi tới địa chỉ Email của bạn</div>
+                            <div> <button type="submit" id="btnLogin">ĐĂNG KÝ</button></div>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+    <script>
+        var modal = document.getElementById('Login');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
