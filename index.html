@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Myni Pham · Quantitative Analyst</title>
+<meta name="description" content="Myni Pham is a Quantitative Analyst in commodities trading working on time-series forecasting, statistical modeling and quant infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #14181f;
+    --muted: #5b6472;
+    --line: #e3e6ec;
+    --accent: #0f4c81;
+    --accent-soft: #e6eef7;
+    --up: #1a7f5a;
+    --shadow: 0 1px 2px rgba(20,24,31,.04), 0 4px 16px rgba(20,24,31,.05);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --surface: #151b24;
+      --text: #e8ecf2;
+      --muted: #97a1b0;
+      --line: #252d3a;
+      --accent: #6aa9e9;
+      --accent-soft: #16263a;
+      --up: #4cc38a;
+      --shadow: none;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
+  nav .brand { font-weight: 700; color: var(--text); }
+  nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
+  nav ul a { color: var(--muted); }
+  nav ul a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 640px) { nav ul { display: none; } }
+
+  /* Hero */
+  header.hero { padding-block: 72px 48px; }
+  .eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.1; margin: 10px 0 16px; letter-spacing: -.02em; }
+  .lead { font-size: clamp(17px, 2.2vw, 19px); color: var(--muted); max-width: 640px; margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #0d1117; } }
+  .btn:hover { text-decoration: none; filter: brightness(1.05); }
+  .spark { width: 100%; height: 80px; margin-top: 48px; display: block; }
+  .spark path.line { fill: none; stroke: var(--accent); stroke-width: 2; }
+  .spark path.area { fill: var(--accent-soft); }
+
+  /* Sections */
+  section { padding-block: 56px; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 28px; letter-spacing: -.01em; }
+  h2 .num { color: var(--accent); font-size: 15px; margin-right: 10px; font-weight: 600; }
+  h3 { font-size: 18px; margin: 0 0 4px; }
+  p { margin: 0 0 14px; }
+
+  /* Metrics */
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .metric { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); }
+  .metric .val { font-size: 32px; font-weight: 700; color: var(--up); letter-spacing: -.02em; }
+  .metric .lbl { color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .role { position: relative; margin-bottom: 36px; }
+  .role:last-child { margin-bottom: 0; }
+  .role::before {
+    content: ""; position: absolute; left: -28px; top: 6px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--bg); border: 3px solid var(--accent);
+  }
+  .role .meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+  .role ul { margin: 0; padding-left: 18px; }
+  .role li { margin-bottom: 6px; }
+
+  /* Projects */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px;
+    box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .card p { color: var(--muted); font-size: 15px; flex: 1; }
+  .card .result { font-size: 14px; color: var(--up); font-weight: 600; margin-bottom: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px 32px; }
+  .skills h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 10px; }
+
+  /* Education */
+  .edu { display: grid; gap: 22px; }
+  .edu-item { display: grid; grid-template-columns: 170px 1fr; gap: 16px; }
+  .edu-item .when { color: var(--muted); font-size: 14px; padding-top: 2px; }
+  .edu-item ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .links { font-size: 14px; display: flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
+  @media (max-width: 560px) { .edu-item { grid-template-columns: 1fr; gap: 2px; } }
+
+  .pubs { padding-left: 18px; margin: 0; }
+  .pubs li { margin-bottom: 10px; }
+  .pubs em { color: var(--muted); }
+
+  footer { padding-block: 56px 72px; border-top: 1px solid var(--line); text-align: center; }
+  footer p { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Myni Pham</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Quantitative Analyst · Commodities Trading</div>
+    <h1>I turn market data into decisions traders can act on.</h1>
+    <p class="lead">
+      3+ years in commodities trading, now co-leading the Quant Investing team at Tuan Loc Commodities.
+      My work covers time-series forecasting and statistical research, and I also build the data and
+      backend systems that run those models every day.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:minniepham.dev@gmail.com">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/myni2000/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <svg class="spark" viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true">
+      <path class="area" d="M0,62 L60,58 L120,64 L180,50 L240,54 L300,42 L360,46 L420,34 L480,40 L540,28 L600,33 L660,22 L720,27 L780,18 L840,22 L900,12 L960,16 L1000,8 L1000,80 L0,80 Z"/>
+      <path class="line" d="M0,62 L60,58 L120,64 L180,50 L240,54 L300,42 L360,46 L420,34 L480,40 L540,28 L600,33 L660,22 L720,27 L780,18 L840,22 L900,12 L960,16 L1000,8"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <div class="wrap">
+    <h2><span class="num mono">01</span>Highlights</h2>
+    <div class="metrics">
+      <div class="metric"><div class="val mono">75%</div><div class="lbl">Directional accuracy of the opening-price forecasting model (p = 0.01, out-of-sample)</div></div>
+      <div class="metric"><div class="val mono">$14.4/MT</div><div class="lbl">Improvement in daily hedging execution</div></div>
+      <div class="metric"><div class="val mono">72.3%</div><div class="lbl">Directional accuracy at a 13-week horizon from the volatility-normalized differential model</div></div>
+      <div class="metric"><div class="val mono">2M+</div><div class="lbl">Market records analysed to identify commodity price drivers</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2><span class="num mono">02</span>Experience</h2>
+    <div class="timeline">
+
+      <div class="role">
+        <h3>Co-Lead of Quant Investing Team</h3>
+        <div class="meta">Tuan Loc Commodities · Aug 2025 – Present</div>
+        <ul>
+          <li>Applied crop-year block bootstrapping to validate seasonal price effects. The method keeps within-year dependence and avoids the independence and normality assumptions of conventional t-tests.</li>
+          <li>Led development and out-of-sample validation of a volatility-normalized differential forecasting model with <strong>72.3% directional accuracy</strong> at a 13-week horizon.</li>
+          <li>Co-developed an automated market intelligence pipeline with LangChain and LangSmith, which made prompt experiments easier to run and reports more consistent.</li>
+          <li>Led research on price forecasting, seasonality and trading signals, and turned the findings into insights used for trading and hedging decisions.</li>
+          <li>Worked as an analytics partner to senior stakeholders, turning their business questions into metrics and data-driven analyses.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Quantitative Analyst &amp; Developer</h3>
+        <div class="meta">Tuan Loc Commodities · Oct 2022 – Jul 2025</div>
+        <ul>
+          <li>Helped develop and validate opening-price forecasting models, reaching <strong>75% directional accuracy (p = 0.01)</strong> and improving daily hedging execution by <strong>$14.4/MT</strong>.</li>
+          <li>Built a multi-factor model that breaks down futures price moves into positioning, seasonality and macro drivers.</li>
+          <li>Helped build the Quant Team's backend platform. It connects to the data warehouse and automates data sync, processing, daily model runs and report generation.</li>
+          <li>Built automated reporting workflows and data validation systems for daily insights.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Data Analyst</h3>
+        <div class="meta">Tuan Loc Commodities · Jan 2022 – Sep 2022</div>
+        <ul>
+          <li>Processed and validated large market, fundamental and alternative datasets.</li>
+          <li>Ran exploratory analysis on 2M+ records in Python and SQL to identify commodity price drivers.</li>
+          <li>Maintained automated reporting and worked with data engineers to keep pipelines reliable.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2><span class="num mono">03</span>Selected projects</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>Opening-Price Forecasting</h3>
+        <p>Models that forecast commodity opening prices to support daily hedging execution, validated strictly out-of-sample.</p>
+        <div class="result">75% directional accuracy · +$14.4/MT</div>
+        <div class="tags"><span class="tag">Classification</span><span class="tag">Python</span><span class="tag">SQL</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Volatility-Normalized Differential Model</h3>
+        <p>A medium-horizon forecasting model for price differentials, normalized for volatility regimes so that signals can be compared across market conditions.</p>
+        <div class="result">72.3% directional accuracy · 13-week horizon</div>
+        <div class="tags"><span class="tag">Time-series</span><span class="tag">Forecasting</span><span class="tag">Validation</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Seasonality via Block Bootstrapping</h3>
+        <p>A resampling framework that treats each crop year as one block. It tests whether seasonal patterns are real without assuming independence or normality.</p>
+        <div class="result">Robust inference for seasonal effects</div>
+        <div class="tags"><span class="tag">Bootstrapping</span><span class="tag">Hypothesis testing</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Multi-Factor Price Decomposition</h3>
+        <p>Breaks down commodity futures price moves into positioning, seasonality and macro indicators to measure how much each factor drives the market.</p>
+        <div class="result">Measured the main market drivers</div>
+        <div class="tags"><span class="tag">Regression</span><span class="tag">Macro</span><span class="tag">Positioning</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Quant Backend Platform</h3>
+        <p>A platform connected to the enterprise data warehouse that runs data sync, processing, daily model runs and report generation as asynchronous jobs.</p>
+        <div class="result">Daily research runs end-to-end</div>
+        <div class="tags"><span class="tag">Docker</span><span class="tag">Redis</span><span class="tag">Celery</span><span class="tag">PostgreSQL</span></div>
+      </article>
+
+      <article class="card">
+        <h3>AI Market Intelligence Pipeline</h3>
+        <p>An automated pipeline that writes market reports with LangChain and traces every prompt and flow experiment in LangSmith.</p>
+        <div class="result">More consistent, reproducible reports</div>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">LangSmith</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2><span class="num mono">04</span>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Quantitative methods</h3>
+        <div class="tags"><span class="tag">Time-Series Analysis</span><span class="tag">Regression</span><span class="tag">Classification</span><span class="tag">Hypothesis Testing</span><span class="tag">Monte Carlo</span><span class="tag">Bootstrapping</span></div>
+      </div>
+      <div>
+        <h3>Programming &amp; data</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">ETL</span><span class="tag">Data Validation</span><span class="tag">Data Warehouse</span></div>
+      </div>
+      <div>
+        <h3>Backend &amp; systems</h3>
+        <div class="tags"><span class="tag">Docker</span><span class="tag">Redis</span><span class="tag">Celery</span><span class="tag">REST APIs</span><span class="tag">Async tasks</span><span class="tag">Microservices</span></div>
+      </div>
+      <div>
+        <h3>Visualization &amp; AI</h3>
+        <div class="tags"><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Matplotlib</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">LangSmith</span><span class="tag">Agentic Workflows</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2><span class="num mono">05</span>Education &amp; credentials</h2>
+    <div class="edu">
+      <div class="edu-item">
+        <div class="when mono">2024 – 2025</div>
+        <div>
+          <h3>CFA Program: Level I passed, Level II Candidate</h3>
+          <div class="links">
+            <a href="https://credentials.cfainstitute.org/91257b01-532e-4d6d-8994-fa866f300cb8" target="_blank" rel="noopener">Credential ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="when mono">2023 – 2025</div>
+        <div>
+          <h3>MITx MicroMasters Program in Finance</h3>
+          <ul><li>One of two students selected as <strong>cohort speaker</strong> at the graduation ceremony, representing a global cohort of professionals.</li></ul>
+          <div class="links">
+            <a href="https://credentials.edx.org/credentials/e5fea35791d14046b981829954b3b293/" target="_blank" rel="noopener">Credential ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="when mono">2018 – 2022</div>
+        <div>
+          <h3>University of Economics &amp; Law, VNU-HCM</h3>
+          <ul>
+            <li>Bachelor of Economics, Honors Program in Electronic Commerce, graduated with a Very Good classification (GPA 8.42/10)</li>
+            <li>2nd Prize, UEL Scientific Research Award (2020)</li>
+            <li>Student of Five Merits, VNU-HCM (2021)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;margin-bottom:14px">Publications</h3>
+    <ul class="pubs">
+      <li><strong>An Application of RASA Technology to Design an AI Virtual Assistant</strong><br><em>Journal of Asian Finance, Economics and Business</em></li>
+      <li><strong>AI Chatbot for Patient Declaration and Outpatient Navigation</strong><br><em>International Journal of Advanced Science and Convergence</em></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2 style="margin-bottom:12px">Let's talk</h2>
+    <p>Open to conversations on quantitative research, commodities markets and data-driven trading.</p>
+    <div class="cta" style="justify-content:center;margin-top:20px">
+      <a class="btn primary" href="mailto:minniepham.dev@gmail.com">minniepham.dev@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/myni2000/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/myni2000" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="mono" style="margin-top:36px;font-size:13px">© 2026 Myni Pham · Ho Chi Minh City</p>
+  </div>
+</footer>
+
+</body>
+</html>
